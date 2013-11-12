@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body { background-color: #fbf8f5 }
+.navbar-inverse {
+    background: #3b7140;
+    color: #FFF;
+    z-index: 50;
+}
+@media screen and (min-width: 767px) .post { 
+    
+}
+.post section.image {
+    height: 260px;
+    background: #FFF;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,.05);
+    text-align: center;
+}
+.post section.text { padding: 25px }
+.post.panel section.text h4.title {
+    color: #625f5d;
+    font-weight: 200;
+    line-height: 30px;
+    position: relative;
+    margin-top: -8px;
+    margin-bottom: 5px;
+}
+.post.panel section.text h4.title a {
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+    color: #625f5d;
+}
+.post.panel section.text h6.byline {
+    font-size: .78571em;
+    color: #c1beba;
+}
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p { color: #666 }
+.post.panel section.metrics {
+    padding: 45px 25px 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -moz-linear-gradient(top,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,0)),color-stop(45%,#fff),color-stop(100%,#fff));
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
+    background: -o-linear-gradient(top,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
+    background: -ms-linear-gradient(top,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
+}
+.post.panel section.text p { 
+	font-size: 1em ;
+	margin-bottom: 0px;
+}
+p {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.42857em;
+    text-rendering: optimizeLegibility;
+}
+.post.panel {
+    padding: 0;
+    overflow: hidden;
+    /*max-height: 535px;*/
+    position: relative;
+}
+.panel {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+.panel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C0C0C0;
+    margin-bottom: 2.14286em;
+    padding: 1.42857em;
+    background: #fff;
+}
+.post.panel section.image img.multi,
+.post.panel section.image .img.multi {
+    position: relative;
+    filter: alpha(Opacity=80);
+    opacity: .8;
+}
+.post.panel section.image img,
+.post.panel section.image .img {
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.1)));
+    background-image: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 100%);
+    background-image: -o-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 100%);
+    background-image: -ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 100%);
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 100%);
+    width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center top!important;
+    background-size: 100% auto!important;
+}
+a img { border: 0 }
+img { vertical-align: baseline!important }
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+img { -ms-interpolation-mode: bicubic }
+img,
+object,
+embed {
+    max-width: 100%;
+    height: auto;
+}
+img { border: 0 }
+.post.panel section.image:hover {
+    -webkit-transition: opacity .2s ease;
+    -moz-transition: opacity .2s ease;
+    -o-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+    filter: alpha(Opacity=80);
+    opacity: .8;
+}
+
+
+.post.panel section.tags {
+	padding: 10px 10px 5px;
+	background-color: #F2F2F2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #C0C0C0;
+}
+
+.post.panel section.tags p {
+	padding-left: 5px;
+	color: #808080;
+	font-size: 0.8em ;
+	margin-bottom: 0px;
+}

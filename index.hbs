@@ -1,0 +1,61 @@
+{{!< default}}
+
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<!--
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{@blog.title}}</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>           
+      </ul>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="container">
+    <div class="row articles">
+
+        {{#foreach posts}}
+        <div class="col-md-4 col-lg-4 article">
+            <div class="post panel {{post_class}}">
+                <section class="image">
+                    <a href="{{url}}">
+                        <img src="assets/img/blank.png" style="background-image: url(./assets/img/large_square.png)" class="square">
+                    </a>
+                </section>
+                <section class="text">
+                    <h4 class="title"> {{{title}}} </h4>
+                    <h6 class="byline">
+                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                    </h6>
+                    <p>{{excerpt}}</p>
+                </section>
+                <section class="metrics"></section>
+                <section class="tags">
+                    <p>
+                        {{tags prefix="#" separator=" #"}}
+                    </p>
+                </section>
+            </div>                
+        </div>
+        {{/foreach}}
+
+    </div>
+</div>
+
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{pagination}}
