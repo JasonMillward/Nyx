@@ -1,5 +1,5 @@
 
-#site-head {
+.site-head {
     position: relative;
     display: table;
     width: 100%;
@@ -19,8 +19,9 @@
     padding: 6px;
     font-size: 16px;
 }
-
-
+.img-rounded {
+    border-radius: 50%;
+}
 .inner {
     position: relative;
     width: 80%;
@@ -34,10 +35,16 @@
 }
 
 
-.panel h1,.panel h2,.panel h3,.panel h4,.panel h5,.panel h6,.panel p {
-    color: #666;
-}
 .panel {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #666;
+    }
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;

@@ -1,16 +1,14 @@
 {{!< default}}
 
-<article class="">
-
+<article>
     {{#post}}
+        <header class="post-head">
+            <div class="vertical">
+                <div class="inner">
+                    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img class="blog-logo-post img-rounded" src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
 
-       <header class="post-head">
-           <div class="vertical">
-               <div id="site-head-content" class="inner">
-                   {{#if @blog.logo}}<img class="blog-logo-post" src="{{@blog.logo}}" alt="Blog Logo" />{{/if}}
-
-                   <h2 class="post-title">{{{title}}}</h2>
-                   <h4>
+                    <h2 class="post-title">{{{title}}}</h2>
+                    <h4>
                         {{#if author}}
                         <span class="post-meta"><span class="glyphicon glyphicon-user"></span> {{author.name}}</span>
                         {{/if}}
@@ -18,19 +16,17 @@
                         {{#if tags}}
                         <span class="post-meta"><span class="glyphicon glyphicon-tags"></span> {{tags prefix="" separator=", "}}</span>
                         {{/if}}
-                   </h4>
-               </div>
-           </div>
-       </header>
+                    </h4>
+                </div>
+            </div>
+        </header>
 
-       <div class="col-md-8 col-md-offset-2 post-content">
-           <div class="post panel {{post_class}}">
-               <section class="text">
+        <div class="col-md-8 col-md-offset-2 post-content">
+            <div class="post panel {{post_class}}">
+                <section class="text">
                    <p>{{content}}</p>
-               </section>
-           </div>
-       </div>
-
+                </section>
+            </div>
+        </div>
     {{/post}}
-
 </article>
