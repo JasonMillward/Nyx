@@ -1,14 +1,61 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body { background-color: #fbf8f5 }
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+}
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Serif'), local('DroidSerif'), url(../fonts/droidserif.woff) format('woff');
+}
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(../fonts/droidserif-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(../fonts/droidserif-Italic.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/opensans-Bold.woff) format('woff');
+}
+body {
+    height: 100%;
+    max-height: 100%;
+    background-color: #fbf8f5;
+    color: #3A4145;
+}
+::-moz-selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
 .navbar-inverse {
     background: #3b7140;
     color: #FFF;
     z-index: 50;
-}
-@media screen and (min-width: 767px) .post { 
-    
 }
 .post section.image {
     height: 260px;
@@ -17,7 +64,9 @@ body { background-color: #fbf8f5 }
     box-shadow: 0 2px 20px rgba(0,0,0,.05);
     text-align: center;
 }
-.post section.text { padding: 25px }
+.post section.text {
+    padding: 25px
+}
 .post.panel section.text h4.title {
     color: #625f5d;
     font-weight: 200;
@@ -43,7 +92,9 @@ body { background-color: #fbf8f5 }
 .panel h4,
 .panel h5,
 .panel h6,
-.panel p { color: #666 }
+.panel p {
+    color: #666
+}
 .post.panel section.metrics {
     padding: 45px 25px 25px;
     position: absolute;
@@ -57,9 +108,9 @@ body { background-color: #fbf8f5 }
     background: -ms-linear-gradient(top,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
     background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 45%,#fff 100%);
 }
-.post.panel section.text p { 
-	font-size: 1em ;
-	margin-bottom: 0px;
+.post.panel section.text p {
+    font-size: 1em;
+    margin-bottom: 0px;
 }
 p {
     font-family: inherit;
@@ -72,7 +123,6 @@ p {
 .post.panel {
     padding: 0;
     overflow: hidden;
-    /*max-height: 535px;*/
     position: relative;
 }
 .panel {
@@ -110,20 +160,28 @@ p {
     background-position: center top!important;
     background-size: 100% auto!important;
 }
-a img { border: 0 }
-img { vertical-align: baseline!important }
+a img {
+    border: 0
+}
+img {
+    vertical-align: baseline!important
+}
 img {
     display: inline-block;
     vertical-align: middle;
 }
-img { -ms-interpolation-mode: bicubic }
+img {
+    -ms-interpolation-mode: bicubic
+}
 img,
 object,
 embed {
     max-width: 100%;
     height: auto;
 }
-img { border: 0 }
+img {
+    border: 0
+}
 .post.panel section.image:hover {
     -webkit-transition: opacity .2s ease;
     -moz-transition: opacity .2s ease;
@@ -132,23 +190,150 @@ img { border: 0 }
     filter: alpha(Opacity=80);
     opacity: .8;
 }
-
-
 .post.panel section.tags {
-	padding: 10px 10px 5px;
-	background-color: #F2F2F2;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    padding: 10px 10px 5px;
+    background-color: #F2F2F2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-top-style: solid;
     border-width: 1px;
     border-color: #C0C0C0;
 }
-
 .post.panel section.tags p {
-	padding-left: 5px;
-	color: #808080;
-	font-size: 0.8em ;
-	margin-bottom: 0px;
+    padding-left: 5px;
+    color: #A2A2A2;
+    font-size: 0.8em;
+    margin-bottom: 0px;
+}
+/* Big cover image on the home page */
+#site-head {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+    background: #303538 no-repeat center center;
+    background-size: cover;
+}
+@media screen and (min-width: 768px) {
+    .post-head {
+        padding-top: 48px;
+        padding-bottom: 20px;
+    }
+}
+.single.post {
+    background-color: #BBB9B7
+}
+.post-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+.post-head {
+    background-color: #f5f0ec;
+    position: relative;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+#blog-logo img {
+    display: block;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+.blog-logo-post {
+    display: block;
+    max-height: 50px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+#back {
+    color: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 6px;
+    font-size: 16px;
+}
+.blog-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+}
+.blog-description {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    font-family: 'Droid Serif', serif;
+    letter-spacing: 0;
+}
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    font-family: 'Open Sans',sans-serif;
+}
+h1 {
+    font-size: 5rem;
+    line-height: 1.2em;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
+.blog-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.blog-title,
+.blog-description {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9)
+}
+.blog-description {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    font-family: 'Droid Serif',serif;
+    letter-spacing: 0;
+}
+.post-title {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+.post-meta {
+    font-size: 13px;
+    color: #c1beba;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.post-meta .glyphicon {
+    padding-right: 2px
 }

@@ -4,58 +4,54 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<!--
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">{{@blog.title}}</a>
+
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+            {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h2 class="blog-description">{{@blog.description}}</h2>
+        </div>
     </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>           
-      </ul>
-    </div>
-  </div>
-</div>
--->
+</header>
 
 
 <div class="container">
     <div class="row articles">
 
         {{#foreach posts}}
-        <div class="col-md-4 col-lg-4 article">
+        <div class="col-md-4 article" id="post-{{id}}">
             <div class="post panel {{post_class}}">
+                <!--
                 <section class="image">
                     <a href="{{url}}">
-                        <img src="assets/img/blank.png" style="background-image: url(./assets/img/large_square.png)" class="square">
+                         <img src="assets/img/blank.png" style="background-image: url('/content/images/{{date format="YYYY"}}/{{date format="MMM"}}/{{slug }}.jpg')" class="square">
                     </a>
-                </section>
+                </section> -->
                 <section class="text">
-                    <h4 class="title"> {{{title}}} </h4>
+                    <h4 class="title"> <a href="{{url}}"> {{{title}}} </a> </h4>
                     <h6 class="byline">
+                        <!-- By {{author.name}} @ -->
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                     </h6>
-                    <p>{{excerpt}}</p>
+                    <p>{{excerpt words="60"}}</p>
                 </section>
                 <section class="metrics"></section>
+                {{#if tags}}
                 <section class="tags">
                     <p>
-                        {{tags prefix="#" separator=" #"}}
+                        #{{tags separator=" #"}}
                     </p>
                 </section>
-            </div>                
+                {{/if}}
+            </div>
         </div>
         {{/foreach}}
 
     </div>
 </div>
 
-
+<!--
 {{!! After all the posts, we have the previous/next pagination links }}
 {{pagination}}
+-->
