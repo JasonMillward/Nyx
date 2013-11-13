@@ -8,7 +8,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    background-color: #fbf8f5;
+    background-color: @base-colour;
     color: #3A4145;
 }
 
@@ -19,9 +19,9 @@ h4,
 h5,
 h6 {
     text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
-    font-family: 'Open Sans',sans-serif;
+    line-height:    1;
+    //margin-top:     0;
+    font-family:    'Open Sans',sans-serif;
 }
 
 h1 {
@@ -52,6 +52,10 @@ embed {
     height: auto;
 }
 
+p, ul, ol {
+    margin: 1.6em 0;
+}
+
 p {
     font-family: inherit;
     font-weight: 400;
@@ -59,4 +63,15 @@ p {
     line-height: 1.6;
     margin-bottom: 1.42857em;
     text-rendering: optimizeLegibility;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0 0 1.6em;
+    border-left: #4a4a4a .4em solid;
+    p {
+        margin: .8em 0;
+        font-style: italic;
+    }
 }
