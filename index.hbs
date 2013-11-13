@@ -22,21 +22,20 @@
         {{#foreach posts}}
         <div class="col-md-4 article" id="post-{{id}}">
             <div class="post panel {{post_class}}">
-                <!--
                 <section class="image">
                     <a href="{{url}}">
-                         <img src="assets/img/blank.png" style="background-image: url('/content/images/{{date format="YYYY"}}/{{date format="MMM"}}/{{slug }}.jpg')" class="square">
+                        <img src="assets/img/blank.png" class="square">
                     </a>
-                </section> -->
-                <section class="text">
+                </section>
+                <section class="text" id="post-text-{{id}}">
                     <h4 class="title"> <a href="{{url}}"> {{{title}}} </a> </h4>
                     <h6 class="byline">
                         <!-- By {{author.name}} @ -->
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                     </h6>
-                    <p>{{excerpt words="60"}}</p>
+                    <hr>
+                    {{{content words="30"}}}
                 </section>
-                <section class="metrics"></section>
                 {{#if tags}}
                 <section class="tags">
                     <p>
