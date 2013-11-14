@@ -6,7 +6,7 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  background-color: #f2f7f3;
+  background-color: #ecf0f1;
   color: #3A4145;
 }
 h1,
@@ -98,7 +98,7 @@ blockquote p {
   display: block;
   max-height: 100px;
   width: auto;
-  margin: 0 auto;
+  margin: 1em auto;
   line-height: 0;
 }
 .blog-logo-post {
@@ -127,12 +127,6 @@ blockquote p {
 }
 .post.panel section.image img,
 .post.panel section.image .img {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.2)));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%);
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 100%);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -183,7 +177,7 @@ blockquote p {
 }
 .post.panel section.tags {
   padding: 5px 10px 5px;
-  background-color: #eaf8e5;
+  background-color: #eeeeee;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -194,22 +188,9 @@ blockquote p {
 }
 .post.panel section.tags p {
   padding-left: 5px;
-  color: #97a393;
+  color: #6c767d;
   font-size: 0.8em;
   margin: 0px;
-}
-.post.panel section.metrics {
-  padding: 45px 25px 25px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(45%, #ffffff), color-stop(100%, #ffffff));
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0, #ffffff 55%, #ffffff 100%);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, #ffffff 55%, #ffffff 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0, #ffffff 55%, #ffffff 100%);
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0, #ffffff 55%, #ffffff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #ffffff 55%, #ffffff 100%);
 }
 .post-title {
   margin: 0;
@@ -219,16 +200,17 @@ blockquote p {
   letter-spacing: 0;
 }
 .post-head {
-  background-color: #F1EFED;
   position: relative;
   display: table;
   width: 100%;
   text-align: center;
   padding-top: 0.5em;
+  background-color: #ffffff;
+  border-bottom: 3px solid #dddddd;
 }
 .post-meta {
   font-size: 13px;
-  color: #BEB4AA;
+  color: #8F9497;
   padding-left: 10px;
   font-weight: bold;
 }
@@ -246,6 +228,27 @@ blockquote p {
   text-align: center;
   display: none;
 }
+.post section.single-page img {
+  padding: 4px;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1.2em;
+}
+.post section.single-page p {
+  margin: 0;
+  padding-bottom: 1.2em;
+}
+.post section.single-page p:last-of-type {
+  margin: 0;
+  padding-bottom: 0;
+}
 .post-content {
   padding-left: 30px;
   padding-right: 30px;
@@ -259,6 +262,29 @@ blockquote p {
 }
 .post-content .text p {
   min-height: 0;
+}
+.post-comments {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 1.5em;
+  margin-bottom: 3.5em;
+}
+.post-comments #disqus_thread {
+  padding: 20px;
+}
+.site-footer {
+  position: relative;
+  display: table;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5em;
+  background-color: #ffffff;
+  border-top: 3px solid #dddddd;
+  padding-bottom: 5px;
+}
+.site-footer .copyright,
+.site-footer .poweredby {
+  font-size: 0.8em;
 }
 .site-head {
   position: relative;
