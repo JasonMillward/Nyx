@@ -1,9 +1,5 @@
 {{!< default}}
 
-<!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
-
 
 <header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <div class="vertical">
@@ -17,14 +13,23 @@
 
 
 <main class="container">
-    <div class="row articles">
+    <!--[if lt IE 7]>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+            </div>
+        </div>
+    </div>
+    <![endif]-->
 
+    <div class="row articles">
         {{#foreach posts}}
         <div class="col-md-4 article" id="post-{{id}}">
             <div class="post panel {{post_class}}">
                 <section class="image">
                     <a href="{{url}}">
-                        <img src="assets/img/blank.png" class="square">
+                        <img src="assets/img/blank.png" alt="cover image place holder" class="square">
                     </a>
                 </section>
                 <section class="text" id="post-text-{{id}}">
@@ -46,11 +51,12 @@
             </div>
         </div>
         {{/foreach}}
-
     </div>
+
     <div class="row">
         <div class="col-md-12">
             {{pagination}}
         </div>
     </div>
+
 </main>
