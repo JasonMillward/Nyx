@@ -16,6 +16,11 @@
                         {{#if tags}}
                         <span class="post-meta"><span class="glyphicon glyphicon-tags"></span> {{tags prefix="" separator=", "}}</span>
                         {{/if}}
+
+                        <span class="post-meta"><span class="glyphicon glyphicon-comment"></span>
+                            <a href="http://nyx.demos.jcode.me/suspendisse/#disqus_thread"></a>
+                        </span>
+
                     </h4>
                 </div>
             </div>
@@ -23,10 +28,39 @@
 
         <div class="col-md-8 col-md-offset-2 post-content">
             <div class="panel {{post_class}}">
-                <section class="text">
-                   {{{content}}}
+                <section class="text single-page">
+                   {{content}}
                 </section>
             </div>
         </div>
+
+        <div class="col-md-8 col-md-offset-2 post-comments">
+            <div class="panel post">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'jcodedemos'; // required: replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        // Comments
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+                        // Comment count
+                        var s = document.createElement('script'); s.async = true;
+                        s.type = 'text/javascript';
+                        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                    }());
+                </script>
+
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+        </div>
+
     {{/post}}
 </article>

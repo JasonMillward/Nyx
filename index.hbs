@@ -16,7 +16,7 @@
 </header>
 
 
-<div class="container">
+<main class="container">
     <div class="row articles">
 
         {{#foreach posts}}
@@ -34,7 +34,7 @@
                         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
                     </h6>
                     <hr>
-                    {{{content words="30"}}}
+                    {{{content words="30"}}} &hellip;
                 </section>
                 {{#if tags}}
                 <section class="tags">
@@ -49,6 +49,8 @@
 
     </div>
     <div class="row">
-        {{pagination}}
+        <div class="col-md-12">
+            {{pagination}}
+        </div>
     </div>
-</div>
+</main>

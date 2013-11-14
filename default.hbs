@@ -21,22 +21,23 @@
     <body>
         {{{body}}}
 
-         <!--
-        <div class="container">
-            <hr>
+        <footer class="site-footer">
+            <div class="vertical">
+                <div class="inner">
+                    <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+                    <section class="poweredby">
+                        Proudly published with <a href="http://ghost.org">Ghost</a> &amp;
+                        Designed by <a href="http://jcode.me">jCode</a>
+                    </section>
+                </div>
+            </div>
+        </footer>
 
-
-            <footer>
-                <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-                <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-            </footer>
-
-        </div>
-        -->
 
         {{ghost_foot}}
         <script src="/assets/js/vendor/masonry.js"></script>
         <script src="/assets/js/vendor/jquery.infinitescroll.js"></script>
+        <script src="/assets/js/vendor/jquery.sharrre.min.js"></script>
         <script src="/assets/js/main.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
