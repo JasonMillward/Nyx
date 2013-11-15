@@ -13,16 +13,12 @@
             }
         });
     }
-
     $(document).ready(function(){
         var $container = $('.articles');
-
         cover_images();
-
         $container.masonry({
             itemSelector: '.article'
         });
-
         if ( $(".pagination span").length ) {
             var pages = $(".pagination span").html().split(" of ");
             $('.articles').infinitescroll({
