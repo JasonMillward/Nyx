@@ -1,27 +1,60 @@
-
-.post.panel section.image {
-    img, .img {
-        background-repeat:          no-repeat;
-
-        background-position:        center top;
-
-        background-size:            cover;
-        width:                      100%;
-        max-width:                  100%;
+.post {
+    section.text {
+        padding:                    25px;
     }
-}
-
-.post.panel section.image {
-    img.multi, .img.multi {
-        position:                   relative;
-        filter:                     alpha(Opacity=80);
-        opacity:                    .8;
+    section.image {
+        height:                     260px;
+        background:                 #FFF;
+        overflow:                   hidden;
+        box-shadow:                 0 2px 20px rgba(0,0,0,.05);
+        text-align:                 center;
+        display:                    none;
+    }
+    section.single-page {
+        img {
+            padding:                4px;
+            height:                 auto;
+            max-width:              100%;
+            line-height:            1.428571429;
+            background-color:       #fff;
+            border:                 1px solid #ddd;
+            border-radius:          4px;
+            -webkit-transition:     all .2s ease-in-out;
+            transition:             all .2s ease-in-out;
+            margin-bottom:          1.2em;
+        }
+        p {
+            margin:                 0;
+            padding-bottom:         1.2em;
+        }
+        p:last-of-type {
+            margin:                 0;
+            padding-bottom:         0;
+        }
     }
 }
 .post.panel {
     padding:                        0;
     overflow:                       hidden;
     position:                       relative;
+    section.image {
+        img.multi,
+        .img.multi {
+            position:               relative;
+            filter:                 alpha(Opacity=80);
+            opacity:                .8;
+        }
+        img,
+        .img {
+            background-repeat:      no-repeat;
+            background-position:    center top;
+
+            background-size:        cover;
+            width:                  100%;
+            max-width:              100%;
+        }
+    }
+
     section.image:hover {
         -webkit-transition:         opacity .2s ease;
         -moz-transition:            opacity .2s ease;
@@ -100,42 +133,7 @@
         padding-right:              2px;
     }
 }
-.post {
-    section.text {
-        padding:                    25px;
-    }
-    section.image {
-        height:                     260px;
-        background:                 #FFF;
-        overflow:                   hidden;
-        box-shadow:                 0 2px 20px rgba(0,0,0,.05);
-        text-align:                 center;
-        display:                    none;
-    }
-    section.single-page {
-        img {
-            padding:                4px;
-            display:                inline-block;
-            height:                 auto;
-            max-width:              100%;
-            line-height:            1.428571429;
-            background-color:       #fff;
-            border:                 1px solid #ddd;
-            border-radius:          4px;
-            -webkit-transition:     all .2s ease-in-out;
-            transition:             all .2s ease-in-out;
-            margin-bottom:          1.2em;
-        }
-        p {
-            margin:                 0;
-            padding-bottom:         1.2em;
-        }
-        p:last-of-type {
-            margin:                 0;
-            padding-bottom:         0;
-        }
-    }
-}
+
 .post-content {
     padding-left:                   30px;
     padding-right:                  30px;
@@ -154,7 +152,7 @@
 .post-comments {
     padding-left:                   30px;
     padding-right:                  30px;
-    margin-top:                     1.5em;
+    margin-top:                     0;
     margin-bottom:                  3.5em;
 
     #disqus_thread {
