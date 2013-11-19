@@ -2,6 +2,7 @@ Ghost theme: Nyx
 ================
 
 ![Mockup](http://jcode.me/content/images/2013/Nov/nyx_mockup.png)
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/4eeb937079d1199c0b11805aaa14dbfb "githalytics.com")](http://githalytics.com/JasonMillward/Nyx)
 
 Nyx is a light weight and responsive theme for [Ghost](https://github.com/TryGhost/Ghost).
 
